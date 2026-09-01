@@ -2,15 +2,13 @@
 
 Language／語言：English｜[繁體中文（香港）](README.md)
 
-Teach your AI assistant (ChatGPT, Claude, Gemini, …) to fetch live store and ticket-queue data from Sushiro Hong Kong's official SushiPass API by itself.
+Teach your AI assistant (ChatGPT, Claude, Gemini, …) to check live store and ticket-queue data for Sushiro Hong Kong by itself.
 
-> **Technical user?** The skill and MCP implementations live at the bottom — jump straight to [skill](#skill--for-ai-coding-agents-advanced-users) or [MCP server](#mcp-server--self-host-professionals).
+> **Technical user?** Jump straight to [skill](#skill--for-ai-coding-agents-advanced-users) or [MCP server](#mcp-server--self-host-professionals).
 
 ## Prompt
 
-Pick the English prompt below, copy the entire code block, and send it as your **first message** to any chatbot (ChatGPT, Claude, Gemini, …) — the AI does the fetching for you. If the AI itself cannot fetch URLs, it will hand you a `curl` command (run it in a terminal) or a URL (open it in your browser); paste the output back into the chat and the AI continues from there.
-
-Prefer a prompt written in Hong Kong Chinese? The 香港中文版prompt block lives in [README.md](README.md).
+Copy the entire English prompt below and send it as your **first message** to any chatbot (ChatGPT, Claude, Gemini, …) — the AI does the fetching for you. If the AI itself cannot fetch URLs, it will hand you a `curl` command (run it in a terminal) or a URL (open it in your browser); paste the output back into the chat and the AI continues from there.
 
 ### English prompt
 

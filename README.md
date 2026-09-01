@@ -2,15 +2,13 @@
 
 語言／Language：繁體中文（香港）｜[English](README.en.md)
 
-教你嘅 AI 助手（ChatGPT、Claude、Gemini 等）自己讀取壽司郎香港（Sushiro Hong Kong）官方 SushiPass API 嘅即時分店及取籌排隊資料。
+教你嘅 AI 助手（ChatGPT、Claude、Gemini 等）自己睇香港壽司郎即時分店及取籌排隊資料。
 
-> **你係技術用家？** skill 同 MCP 實作喺頁面最底，可以直接跳去 [skill](#skill--ai-編程助理進階用家) 或者 [MCP 伺服器](#mcp-伺服器--自行部署專業用戶)。
+> **你係技術用家？** 可以直接跳去 [skill](#skill--ai-編程助理進階用家) 或者 [MCP 伺服器](#mcp-伺服器--自行部署專業用戶)。
 
 ## Prompt
 
-揀香港中文版prompt，整個 code block 複製，作為**第一句訊息**貼入任何聊天機械人（ChatGPT、Claude、Gemini 等），AI會代你讀取資料。若果AI自己不能讀取網址，它會交畀你 `curl` 指令（喺 terminal 執行）或網址（貼入瀏覽器開啟）；你將輸出貼返入對話，AI就會繼續。
-
-想要英文版prompt？英文版喺 [README.en.md](README.en.md)。
+複製整個中文版prompt，作為**第一句訊息**貼入任何聊天機械人（ChatGPT、Claude、Gemini 等），AI會代你讀取資料。若果AI自己不能讀取網址，它會交畀你 `curl` 指令（喺 terminal 執行）或網址（貼入瀏覽器開啟）；你將輸出貼返入對話，AI就會繼續。
 
 ### 香港中文版prompt
 
