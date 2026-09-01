@@ -6,8 +6,8 @@ service, so every call this repo makes is a cost we impose on someone else's
 production system. Treat it as fragile and be conservative with it.
 
 **Scope:** these rules cover the whole repository — the `mcp/` server, the
-chatbot prompt embedded in the root `README.md`, and the `skill/` agent skill
-alike.
+chatbot prompts embedded in the root `README.md` and `README.en.md`, and the
+`skill/` agent skill alike.
 
 ## Hard rules
 
@@ -27,6 +27,19 @@ alike.
 - **Do not write examples, docs, or prompts that encourage frequent
   polling** of the API (e.g. "call every second"). If documenting polling
   behavior, recommend intervals of at least 30–60 seconds.
+
+## Documentation sync
+
+- The repo has two top-level READMEs that must stay in sync: `README.md`
+  (Traditional Chinese, Hong Kong style) and `README.en.md` (English). Any
+  content change to one — structure, instructions, examples, FAQ, notices,
+  API-usage guidance — must be mirrored in the other in the same change,
+  section for section.
+- Only two differences are allowed: the language, and the chatbot prompt
+  blocks (`README.en.md` carries only the English prompt; the Hong Kong
+  Chinese prompt block lives in `README.md`).
+- Keep the language switcher near the top of both files, plus the
+  "technical users: scroll to the bottom for skill & MCP" note, in both.
 
 ## Notes
 
