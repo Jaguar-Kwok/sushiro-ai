@@ -2,15 +2,15 @@
 
 Language／語言：**English**｜[繁體中文（香港）](README.md)
 
-Teach your AI assistant (ChatGPT, Claude, Gemini, …) to fetch live store and ticket-queue data from Sushiro Hong Kong's official SushiPass API by itself. Three ways to use it — pick the one that matches your skill level.
+Teach your AI assistant (ChatGPT, Claude, Gemini, …) to fetch live store and ticket-queue data from Sushiro Hong Kong's official SushiPass API by itself.
 
-> **Technical user?** Most of this page is written for non-technical users: start at "Try it in one line" below, paste one prompt into a chatbot, done. The skill and MCP implementations live at the bottom — jump straight to [2. skill](#2-skill--for-ai-coding-agents-advanced-users) or [3. MCP server](#3-mcp-server--self-host-professionals).
+> **Technical user?** The skill and MCP implementations live at the bottom — jump straight to [skill](#skill--for-ai-coding-agents-advanced-users) or [MCP server](#mcp-server--self-host-professionals).
 
-## Try it in one line (no setup)
+## Prompt
 
-Pick the English prompt below, copy the entire code block, and send it as your **first message** to any chatbot (ChatGPT, Claude, Gemini, …) — nothing to install, no key; the chatbot does the fetching for you. If the chatbot cannot fetch URLs itself, it will hand you a `curl` command (run it in a terminal) or a URL (open it in your browser); paste the output back into the chat and the chatbot continues from there.
+Pick the English prompt below, copy the entire code block, and send it as your **first message** to any chatbot (ChatGPT, Claude, Gemini, …) — the AI does the fetching for you. If the AI itself cannot fetch URLs, it will hand you a `curl` command (run it in a terminal) or a URL (open it in your browser); paste the output back into the chat and the AI continues from there.
 
-Prefer a prompt written in Hong Kong Chinese? The 香港中文版提示詞 block lives in [README.md](README.md).
+Prefer a prompt written in Hong Kong Chinese? The 香港中文版prompt block lives in [README.md](README.md).
 
 ### English prompt
 
@@ -38,25 +38,9 @@ I'm driving from Sha Tin. Find me the best Sushiro to go to right now: work out 
 
 Note: travel times are estimates; queue data is live from the API but changes constantly — verify with official Sushiro channels before heading out.
 
-## Which path is for you?
+Questions? Jump straight to the [FAQ](#faq).
 
-| You are… | Use | Why | What you need |
-|---|---|---|---|
-| No technical background — you just want the data | The prompt in [Try it in one line](#try-it-in-one-line-no-setup) above | Copy one block into any chatbot; the chatbot fetches the data for you | Just a chatbot account |
-| Advanced — you work with AI coding agents | [2. skill](#2-skill--for-ai-coding-agents-advanced-users) | One `npx skills add` command installs an agent skill; the agent fetches and organizes data on demand | Node.js/npx; or an agent such as opencode, Claude Code |
-| Professional — you run your own services | [3. MCP server](#3-mcp-server--self-host-professionals) | Run the real MCP server locally or on your own server and connect any MCP client | uv or Docker |
-
-## 1. The chatbot prompt — paste into any chatbot (general users)
-
-Nothing to install, no key, nothing to host — the full prompt is embedded in [Try it in one line](#try-it-in-one-line-no-setup) above.
-
-1. Copy the entire code block (the English prompt; the Hong Kong Chinese prompt in [README.md](README.md) is interchangeable).
-2. Send it as your **first message** to any chatbot.
-3. If the chatbot cannot fetch URLs itself, it will hand you a `curl` command (to run in a terminal) or a URL (to open in your browser); paste the output back into the chat either way, and the chatbot continues.
-
-The chatbot will ask for a location or store id when needed and reply in the language of the prompt you chose. See [Example prompts](#example-prompts) above for samples.
-
-## 2. skill — for AI coding agents (advanced users)
+## skill — for AI coding agents (advanced users)
 
 A standalone agent skill (`skill/sushiro-scraper/SKILL.md`) that teaches your agent to fetch Sushiro data itself, with a fallback ladder (direct GET → throwaway script → curl → webfetch/websearch) so it keeps working when endpoints are blocked or moved.
 
@@ -95,7 +79,7 @@ Then just ask naturally. See [Example prompts](#example-prompts) above for sampl
 
 The agent reads the skill's recipes, fetches politely (≥1–2s between calls, no loops), and returns the same JSON shapes as the MCP tools.
 
-## 3. MCP server — self-host (professionals)
+## MCP server — self-host (professionals)
 
 The source of truth: a Python MCP SDK v2 server exposing two tools — `list_stores` and `get_store_queue` — over streamable HTTP (stdio also supported). It throttles itself to at most one upstream request per second.
 
@@ -151,7 +135,7 @@ This is an **unofficial** educational/research project — not affiliated with, 
 
 ```text
 sushiro-ai/
-├── README.md    # 繁體中文（香港）version + both chatbot prompts (English + Hong Kong Chinese)
+├── README.md    # 繁體中文（香港）version + the Hong Kong Chinese chatbot prompt
 ├── README.en.md # this file: English version + the English chatbot prompt
 ├── skill/       # agent skill (sushiro-scraper) — for AI coding agents
 └── mcp/         # self-hostable MCP server (Python SDK v2, stdio or HTTP, Docker, CI)
