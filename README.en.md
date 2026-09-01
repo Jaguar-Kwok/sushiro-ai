@@ -4,6 +4,14 @@ Language／語言：English｜[繁體中文（香港）](README.md)
 
 Teach your AI assistant (ChatGPT, Claude, Gemini, …) to check live store and ticket-queue data for Sushiro Hong Kong by itself.
 
+## See it in action
+
+Same question — driving from Tseung Kwan O Waterfront Park, comparing parking deals — with and without the prompt:
+
+| Without the prompt: generic knowledge, no live queue data | With the prompt: the AI checks live queues first, then compares parking |
+|---|---|
+| ![Reply without the prompt](example_screenshot/before_example.png) | ![Reply with the prompt](example_screenshot/after_example.png) |
+
 > **Technical user?** Jump straight to [skill](#skill--for-ai-coding-agents-advanced-users) or [MCP server](#mcp-server--self-host-professionals).
 
 ## Prompt
@@ -139,6 +147,7 @@ This is an **unofficial** educational/research project — not affiliated with, 
 sushiro-ai/
 ├── README.md    # 繁體中文（香港）version + the Hong Kong Chinese chatbot prompt
 ├── README.en.md # this file: English version + the English chatbot prompt
+├── example_screenshot/ # before/after demo screenshots
 ├── skill/       # agent skill (sushiro-scraper) — for AI coding agents
 └── mcp/         # self-hostable MCP server (Python SDK v2, stdio or HTTP, Docker, CI)
 ```

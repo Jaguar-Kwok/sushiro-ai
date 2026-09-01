@@ -4,6 +4,14 @@
 
 教你嘅 AI 助手（ChatGPT、Claude、Gemini 等）自己睇香港壽司郎即時分店及取籌排隊資料。
 
+## 效果示範
+
+同一條問題——揸車由將軍澳海濱公園出發、想比較泊車優惠——冇用 prompt 同用咗 prompt 嘅分別：
+
+| 冇用 prompt：只靠一般知識，睇唔到即時排隊 | 用咗 prompt：AI 自己查即時排隊先至比較泊車 |
+|---|---|
+| ![未有 prompt 嘅回覆](example_screenshot/before_example.png) | ![用咗 prompt 嘅回覆](example_screenshot/after_example.png) |
+
 > **你係技術用家？** 可以直接跳去 [skill](#skill--ai-編程助理進階用家) 或者 [MCP 伺服器](#mcp-伺服器--自行部署專業用戶)。
 
 ## Prompt
@@ -139,6 +147,7 @@ prompt本身設計咗遞補階梯（CODE-NET → FETCH → SEARCH → curl／瀏
 sushiro-ai/
 ├── README.md    # 本檔：繁體中文（香港）說明 + 可複製嘅聊天機械人prompt（香港中文）
 ├── README.en.md # English version + the English chatbot prompt
+├── example_screenshot/ # before／after 效果示範截圖
 ├── skill/       # agent skill（sushiro-scraper）— 畀 AI 編程助理用
 └── mcp/         # 可自行部署嘅 MCP 伺服器（Python SDK v2，stdio 或 HTTP，附 Docker 及 CI）
 ```
