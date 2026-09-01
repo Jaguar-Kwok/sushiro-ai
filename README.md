@@ -1,6 +1,6 @@
 # 教識你嘅AI睇壽司郎排隊情況
 
-語言／Language：**繁體中文（香港）**｜[English](README.en.md)
+語言／Language：繁體中文（香港）｜[English](README.en.md)
 
 教你嘅 AI 助手（ChatGPT、Claude、Gemini 等）自己讀取壽司郎香港（Sushiro Hong Kong）官方 SushiPass API 嘅即時分店及取籌排隊資料。
 
@@ -22,17 +22,19 @@
 
 **簡單：**
 
-> 「列出旺角港鐵站附近嘅壽司郎分店，話我知邊間仲派緊籌。」
+```text
+「列出旺角港鐵站附近嘅壽司郎分店，話我知邊間仲派緊籌。」
+```
 
-> 「壽司郎油塘分店而家叫到幾多號？」
+```text
+「壽司郎油塘分店而家叫到幾多號？」
+```
 
-**進階 — 搭公共交通：**
+**進階：**
 
 ```text
 我而家喺旺角港鐵站，會搭港鐵或巴士。幫我揀間最快食到嘅壽司郎
 ```
-
-**進階 — 揸車：**
 
 ```text
 我揸車由沙田出發。幫我揀間最快食到嘅壽司郎
@@ -91,10 +93,10 @@ cp -r skill/sushiro-scraper ~/.agents/skills/
 cd mcp && uv sync && uv run sushiro-mcp
 ```
 
-用 Docker：
+用 Docker（直接行 GHCR 預建映像，無需 build）：
 
 ```bash
-docker build -t sushiro-mcp mcp && docker run --rm -p 8000:8000 sushiro-mcp
+docker run --rm -p 8000:8000 ghcr.io/jaguar-kwok/sushiro-mcp
 ```
 
 將任何 MCP 客戶端指向 `http://127.0.0.1:8000/mcp`。進階設定（環境變數、host/origin allowlist、真實 hostname 部署、GHCR 映像）請睇 [`mcp/README.md`](mcp/README.md)。

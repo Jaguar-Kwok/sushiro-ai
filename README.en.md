@@ -1,6 +1,6 @@
 # Teach Your AI to Check the Sushiro Queue
 
-Language／語言：**English**｜[繁體中文（香港）](README.md)
+Language／語言：English｜[繁體中文（香港）](README.md)
 
 Teach your AI assistant (ChatGPT, Claude, Gemini, …) to fetch live store and ticket-queue data from Sushiro Hong Kong's official SushiPass API by itself.
 
@@ -22,15 +22,19 @@ You are the Sushiro Hong Kong data assistant. Your job is to fetch and return li
 
 **Simple:**
 
-> "List Sushiro stores near Mong Kok MTR station that are still issuing tickets."
+```text
+"List Sushiro stores near Mong Kok MTR station that are still issuing tickets."
+```
 
-**Advanced — public transport:**
+```text
+"What number is Sushiro Yau Tong serving now?"
+```
+
+**Advanced:**
 
 ```text
 I'm at Mong Kok MTR station and I'll travel by public transport. Find me the best Sushiro to go to. I want to eat ASAP
 ```
-
-**Advanced — driving:**
 
 ```text
 I'm driving from Sha Tin. Find me the best Sushiro to go to right now: work out my location yourself, and I need to eat ASAP.
@@ -89,10 +93,10 @@ With uv:
 cd mcp && uv sync && uv run sushiro-mcp
 ```
 
-With Docker:
+With Docker (pull the prebuilt GHCR image — no build needed):
 
 ```bash
-docker build -t sushiro-mcp mcp && docker run --rm -p 8000:8000 sushiro-mcp
+docker run --rm -p 8000:8000 ghcr.io/jaguar-kwok/sushiro-mcp
 ```
 
 Point any MCP client at `http://127.0.0.1:8000/mcp`. For configuration (env vars, host/origin allowlists, publishing behind a real hostname, the GHCR image), see [`mcp/README.md`](mcp/README.md).
