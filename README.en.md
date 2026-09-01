@@ -8,7 +8,7 @@ Teach your AI assistant (ChatGPT, Claude, Gemini, …) to check live store and t
 
 Same question — driving from Tseung Kwan O Waterfront Park, comparing parking deals — with and without the prompt:
 
-| Without the prompt: generic knowledge, no live queue data | With the prompt: the AI checks live queues first, then compares parking |
+| Without the prompt: no live queue data, no LOHAS store | With the prompt: the AI checks live queue status itself |
 |---|---|
 | ![Reply without the prompt](example_screenshot/before_example.png) | ![Reply with the prompt](example_screenshot/after_example.png) |
 

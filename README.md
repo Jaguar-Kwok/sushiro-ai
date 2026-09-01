@@ -8,7 +8,7 @@
 
 同一條問題——揸車由將軍澳海濱公園出發、想比較泊車優惠——冇用 prompt 同用咗 prompt 嘅分別：
 
-| 冇用 prompt：只靠一般知識，睇唔到即時排隊 | 用咗 prompt：AI 自己查即時排隊先至比較泊車 |
+| 冇用 prompt：睇唔到即時排隊情況，未有康城店 | 用咗 prompt：AI 自己查即時排隊情況 |
 |---|---|
 | ![未有 prompt 嘅回覆](example_screenshot/before_example.png) | ![用咗 prompt 嘅回覆](example_screenshot/after_example.png) |
 
